@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+gitt commit -m"commiting"
+git push
