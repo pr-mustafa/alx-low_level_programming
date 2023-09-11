@@ -16,8 +16,8 @@ int main(void)
 		{
 			if (x > c)
 			{
-				putchar('0'+c);
-				putchar('0'+x);
+				putchar('0' + c);
+				putchar('0' + x);
 				if (c == 8 && x == 9)
 				{
 					break;
