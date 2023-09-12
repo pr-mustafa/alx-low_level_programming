@@ -9,7 +9,7 @@
  */
 int _islower(int c)
 {
-
+	/* c is the char that will be checked */
 	if (islower(c))
 	{
 		return (1);
