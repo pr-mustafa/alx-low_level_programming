@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_alphabet - entry point
+ * print_alphabet_x10 - entry point
  *
- * Description: This function prints the alphabet, in lowercase
+ * Description: This function prints the alphabet 10 times, in lowercase
  *
  * Return: void
  */
