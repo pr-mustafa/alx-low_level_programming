@@ -8,10 +8,10 @@
 void times_table(void)
 {
 	int a, b, c;
-	
+
 	for (a = 0; a <= 9; a++)
 	{
-		for (b = 0; b <=9; b++)
+		for (b = 0; b <= 9; b++)
 		{
 			c = a * b;
 			if (c >= 10)
@@ -30,12 +30,11 @@ void times_table(void)
 				_putchar(' ');
 				_putchar(c + '0');
 			}
-			if ( b != 9)
+			if (b != 9)
 			{
 				_putchar(',');
 			}
-                }
+		}
 		_putchar('\n');
-        }
-        
+	}
 }
