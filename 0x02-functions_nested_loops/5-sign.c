@@ -1,13 +1,13 @@
 #include <ctype.h>
 #include "main.h"
 /**
- * _isalpha - entry point
+ * print_sign - entry point
  *
  * Description: This function prints 1 if it is lower else print 0
  *
  * Return: 1 for lowercase
  *
- * @c: is the character to be checked
+ * @n: is the character to be checked
  */
 
 int print_sign(int n)
