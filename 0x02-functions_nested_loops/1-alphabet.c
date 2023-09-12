@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_alphabet - entry point
  *
- * Return: Always 0.
- */
-/**
- * this is the main function
+ * Description: This function prints the alphabet, in lowercase
+ *
+ * Return: void
  */
 void print_alphabet(void)
 {
