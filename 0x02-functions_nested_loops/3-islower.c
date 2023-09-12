@@ -9,6 +9,7 @@
  *
  * int c is the character to be checked
  */
+/* int c is the character to be checked */
 int _islower(int c)
 {
 	/*int c is the char that will be checked */
