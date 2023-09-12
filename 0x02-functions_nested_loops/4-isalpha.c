@@ -1,7 +1,7 @@
 #include <ctype.h>
 #include "main.h"
 /**
- * _islower - entry point
+ * _isalpha - entry point
  *
  * Description: This function prints 1 if it is lower else print 0
  *
