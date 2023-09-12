@@ -4,7 +4,6 @@
 /**
   * print_to_98 - Prints every minute of the day of Jack Bauer
   *
-  * @a: is loop
   * @n: parm
   * Return: ...
   */
