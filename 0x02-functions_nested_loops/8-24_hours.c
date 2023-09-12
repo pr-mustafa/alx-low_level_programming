@@ -1,33 +1,31 @@
 #include "main.h"
-/* more headers goes there */
 
 /**
- * jack_bauer - Entry point
- *
- * Return: Always 0 (Success)
- */
+  * jack_bauer - Prints every minute of the day of Jack Bauer
+  *
+  * Return: ...
+  */
 void jack_bauer(void)
 {
-	/* your code goes there */
-	int h1;
-	int h2;
-	int m1;
-	int m2;
+	int a, b, c, d;
 
-	for (h1 = 0; h1 <=2; h1++)
+	for (a = 0; a <= 2; a++)
 	{
-		for (h2 = 0; h2 <= 3; h2++)
+		for (b = 0; b <= 9; b++)
 		{
-			for (m1 = 0; m1 <= 5; m1++)
+			if ((a <= 1 && b <= 9) || (a <= 2 && b <= 3))
 			{
-				for (m2 = 0; m2 <= 9; m2++)
+				for (c = 0; c <= 5; c++)
 				{
-					_putchar('0' + h1);
-					_putchar('0' + h2);
-					_putchar(':');
-					_putchar('0' + m1);
-					_putchar('0' + m2);
-					_putchar('\n');
+					for (d = 0; d <= 9; d++)
+					{
+						_putchar(a + '0');
+						_putchar(b + '0');
+						_putchar(58);
+						_putchar(c + '0');
+						_putchar(d + '0');
+						_putchar('\n');
+					}
 				}
 			}
 		}
