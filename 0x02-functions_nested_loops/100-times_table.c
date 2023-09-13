@@ -2,13 +2,12 @@
 /**
   * print_times_table - Prints every minute of the day of Jack Bauer
   *@n: parm
-  * Return: ...
   */
 void print_times_table(int n)
 {
 	int a, b, c;
 
-	if (n <= 0 || n > 15)
+	if (n < 0 || n > 15)
 		return;
 	for (a = 0; a <= n; a++)
 	{
