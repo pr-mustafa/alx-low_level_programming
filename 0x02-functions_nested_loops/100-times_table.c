@@ -18,6 +18,7 @@ void print_times_table(int n)
 			if (b == 0)
 			{
 				_putchar('0');
+				_putchar(',');
 				continue;
 			}
 			_putchar(' ');
