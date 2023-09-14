@@ -9,13 +9,12 @@
 
 void print_number(int n)
 {
-	int length, div, max, flag;
+	int length, div, max;
 
-	flag = 0;
 	if (n < 0)
 	{
-		flag = 1;
 		n = -n;
+		_putchar('-');
 	}
 	length = 1;
 	max = 1;
@@ -25,10 +24,6 @@ void print_number(int n)
 		length++;
 		max *= 10;
 		div = div / 10;
-	}
-	if (flag == 1)
-	{
-		_putchar('-');
 	}
 	if (length == 1)
 	{
