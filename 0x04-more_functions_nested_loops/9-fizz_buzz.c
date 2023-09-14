@@ -3,12 +3,11 @@
 /**
  * main - entry point
  *
- * Description: This function prints 1 if it is lower else print 0
+ * Description: This function
  *
- * Return: 1 for upercase
+ * Return: 0
  *
  */
-
 int main(void)
 {
 	int i;
@@ -33,5 +32,6 @@ int main(void)
 		}
 	}
 	printf("\n");
+
 	return (0);
 }
