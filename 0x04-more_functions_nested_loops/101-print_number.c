@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include "main.h"
 /**
  * print_number - entry point
