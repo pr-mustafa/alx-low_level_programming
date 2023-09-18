@@ -1,13 +1,12 @@
 #include "main.h"
 #include <string.h>
 /**
- *swap_int - change the value
- *@a: pointer of a
- *@b: pointer of b
+ *_strlen - return length of string
+ *@s: pointer of s
  * Return: Always 0 (Success)
  */
 int _strlen(char *s)
 {
 	/* your code goes there */
-	return strlen(s);
+	return (strlen(s));
 }
