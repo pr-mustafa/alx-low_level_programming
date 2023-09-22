@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  *_strncpy - change the value
@@ -10,11 +11,19 @@
 char *_strncpy(char *a, char *b, int n)
 {
 	/* your code goes there */
-	int i;
+	int i, len;
 
+	len = strlen(b);
 	for (i = 0; i < n; i++)
 	{
-		a[i] = b[i];
+		if (i < len)
+		{
+			a[i] = b[i];
+		}
+		else
+		{
+			a[i] = '\0';
+		}
 	}
 	return (a);
 }
