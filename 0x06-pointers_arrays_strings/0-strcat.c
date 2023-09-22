@@ -10,5 +10,6 @@ char *_strcat(char *a, char *b)
 {
 	/* your code goes there */
 	char *c = strcat(a, b);
+
 	return (c);
 }
