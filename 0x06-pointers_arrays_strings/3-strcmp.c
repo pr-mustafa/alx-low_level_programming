@@ -9,24 +9,40 @@
 int _strcmp(char *a, char *b)
 {
 	/* your code goes there */
-	int i, lena;
+	int i, j, lena, lenb, x;
 
 	i = 0;
+	j = 0;
 	lena = 0;
-	while (a[i] != '\n')
+	lenb = 0;
+	x = 0;
+	while (a[i] != '\0')
 	{
 		lena++;
 		i++;
 	}
-	for (i = 0; i < lena; i++)
+	while (b[j] != '\0')
 	{
-		if (a[i] - b[i] == 0)
+		lenb++;
+		j++;
+	}
+	if (lena <= lenb)
+	{
+		x = lena;
+	}
+	else
+	{
+		x = lenb;
+	}
+	for (i = 0; i < x; i++)
+	{
+		if ((a[i] - b[i]) == 0)
 		{
 			continue;
 		}
 		else
 		{
-			return (a[i] - b[i]);
+			return ((a[i] - b[i]));
 		}
 	}
 	return (0);
