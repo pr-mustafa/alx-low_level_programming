@@ -2,7 +2,7 @@
 
 /**
  *cap_string - change the value
- *@a: pointer of a
+ *@s: pointer of s
  * Return: Always 0 (Success)
  */
 char *cap_string(char *s)
