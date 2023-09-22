@@ -5,33 +5,33 @@
  *@a: pointer of a
  * Return: Always 0 (Success)
  */
-char *cap_string(char *a)
+char *cap_string(char *s)
 {
-	/* your code goes there */
 	int i;
 
 	i = 0;
-	while (a[i])
+	while (s[i] != '\0')
 	{
-		while (!(a[i] >= 'a' && a[i] <= 'z'))
-		i++;
-		if (
-				a[i - 1] == ' ' ||
-				a[i - 1] == '\t' ||
-				a[i - 1] == '\n' ||
-				a[i - 1] == ',' ||
-				a[i - 1] == ';' ||
-				a[i - 1] == '.' ||
-				a[i - 1] == '!' ||
-				a[i - 1] == '?' ||
-				a[i - 1] == '"' ||
-				a[i - 1] == '(' ||
-				a[i - 1] == ')' ||
-				a[i - 1] == '{' ||
-				a[i - 1] == '}' ||
-				a[i] == 0)
-		a[i] -= 32;
+		if ((s[i - 1] == ' ' || s[i - 1] == '\n'
+		|| s[i - 1] == '\t' || s[i - 1] == ','
+		|| s[i - 1] == ';' || s[i - 1] == '!'
+		|| s[i - 1] == '?' || s[i - 1] == '"'
+		|| s[i - 1] == '(' || s[i - 1] == ')'
+		|| s[i - 1] == '{' || s[i - 1] == '}'
+		|| s[i - 1] == '.')
+		&& (s[i] >= 'a' && s[i] <= 'z'))
+		{
+			s[i] = s[i] - 32;
+		}
+		else if ((s[0] >= 97 && s[0] <= 122))
+		{
+			s[0] = s[0] - 32;
+		}
+		else
+		{
+			s[i] = s[i];
+		}
 		i++;
 	}
-	return (a);
+	return (s);
 }
