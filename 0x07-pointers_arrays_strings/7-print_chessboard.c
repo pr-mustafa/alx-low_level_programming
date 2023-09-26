@@ -2,16 +2,14 @@
 
 /**
  *print_chessboard - change the value
- *@dest: pointer of destination
- *@src: pointer of source
- *@n: length
+ *@a: pointer of destination
  * Return: Always 0 (Success)
  */
 void print_chessboard(char (*a)[8])
 {
 	/* your code goes there */
 	int i, j;
-	
+
 	i = 0;
 	j = 0;
 	for (i = 0; i < 8; i++)
