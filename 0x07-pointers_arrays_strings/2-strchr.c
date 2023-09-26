@@ -10,8 +10,7 @@ char *_strchr(char *s, char c)
 {
 	/* your code goes there */
 	int i, sum;
-	char *p = NULL;
-	
+
 	sum = 0;
 	while (s[sum] != '\0')
 	{
@@ -21,10 +20,7 @@ char *_strchr(char *s, char c)
 	for (i = 0; i < sum; i++)
 	{
 		if (s[i] == c)
-			{
-				p = &s[i];
-				return (p);
-			}
+		return (&s[i]);
 	}
-	return (p);
+	return (NULL);
 }
