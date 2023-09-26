@@ -9,18 +9,11 @@
 char *_strchr(char *s, char c)
 {
 	/* your code goes there */
-	int i, sum;
 
-	sum = 0;
-	while (s[sum] != '\0')
+	for (;; s++)
 	{
-		sum += 1;
-	}
-
-	for (i = 0; i < sum; i++)
-	{
-		if (s[i] == c)
-			return (&s[i]);
+		if (*s == c)
+			return (s);
 	}
 	return (NULL);
 }
