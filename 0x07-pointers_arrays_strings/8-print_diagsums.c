@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_diagsums - prints the sum 
+ * print_diagsums - prints the sum
  *
  * @a: the name of the array
  * @size: the size of the array
