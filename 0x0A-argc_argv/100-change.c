@@ -42,7 +42,6 @@ int main(int argc, char **argv)
 			num = num - 1;
 		}
 	}
-			
 	printf("%d\n", sum);
 	return (0);
 }
