@@ -1,28 +1,43 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
+
 /**
- * _realloc - allocates memory for an array, using malloc.
- * @ptr: number of elements.
- * @old_size: element's size.
- * @new_size: element's size.
- * Return: returns a pointer to an array of elements.
+ * _realloc - function that reallocates a memory block using malloc and free
+ * @ptr: void pointer
+ * @old_size: old memory allocated
+ * @new_size: new memory allocated
+ * Return: Always 0.
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	unsigned int i;
-	char *array;
+	unsigned int a;
+	char *new;
+	char *old;
 
-	if (new_size == old_size)
+	old = ptr;
+
+	if (old_size == new_size)
 		return (ptr);
-	if (new_size == 0 && ptr != NULL)
+	if (ptr == 0)
+	{
+		new = malloc(new_size * sizeof(char));
+		return (new);
+	}
+	if (new_size == 0 && ptr != 0)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	array = malloc(new_size);
-	if (array == NULL)
+	new = malloc(new_size * sizeof(char));
+	if (new == 0)
 		return (NULL);
-	for (i = 0; i < new_size; i++)
-		*(array + (i * new_size)) = 0;
-	return (array);
+	if (new_size < old_size)
+	{
+		for (a = 0; a < new_size; a++)
+			new[a] = old[a];
+		return (new);
+	}
+	free(ptr);
+	return (new);
 }
