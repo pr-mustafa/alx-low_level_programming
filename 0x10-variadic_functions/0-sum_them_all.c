@@ -1,38 +1,24 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "variadic_functions.h"
+#include <stdarg.h>
 
 /**
- * main - function with two arguments
- * @argc: int type argument count
- * @argv: char type argument array
- *
- * Description: print opcode
- * Return: na
+ * sum_them_all - return sum of all parameters
+ * @n: number of arguments
+ * Return: sum of parameters
  */
-int main(int argc, char **argv)
+int sum_them_all(const unsigned int n, ...)
 {
-	int count;
+	va_list list;
+	int sum = 0;
+	unsigned int a;
 
-	count = 0;
-	if (argc != 2)
+	if (n == 0)
+		return (0);
+	va_start(list, n);
+	for (a = 0; a < n; a++)
 	{
-		printf("Error\n");
-		exit(1);
+		sum = sum + va_arg(list, unsigned int);
 	}
-	if (atoi(argv[1]) < 0)
-	{
-		printf("Error\n");
-		exit(2);
-	}
-	while (count < atoi(argv[1]))
-	{
-		printf("%02x", *((unsigned char *)main + count));
-		count++;
-		if (atoi(argv[1]) > count)
-		{
-			printf(" ");
-		}
-	}
-	printf("\n");
-	return (0);
+	va_end(list);
+	return (sum);
 }
