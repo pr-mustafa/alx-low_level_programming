@@ -1,20 +1,38 @@
-#include <stdarg.h>
-/**
- * sum_them_all - sums all arguments.
- * @n: number of elements.
- * Return: 0 for n == 0 or sum.
- */
-int sum_them_all(const unsigned int n, ...)
-{
-	int sum = 0;
-	unsigned int i;
-	va_list a_list;
+#include <stdio.h>
+#include <stdlib.h>
 
-	va_start(a_list, n);
-	if (n == 0)
-		return (0);
-	for (i = 0; i < n; i++)
-		sum += va_arg(a_list, int);
-	va_end(a_list);
-	return (sum);
+/**
+ * main - function with two arguments
+ * @argc: int type argument count
+ * @argv: char type argument array
+ *
+ * Description: print opcode
+ * Return: na
+ */
+int main(int argc, char **argv)
+{
+	int count;
+
+	count = 0;
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+	if (atoi(argv[1]) < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+	while (count < atoi(argv[1]))
+	{
+		printf("%02x", *((unsigned char *)main + count));
+		count++;
+		if (atoi(argv[1]) > count)
+		{
+			printf(" ");
+		}
+	}
+	printf("\n");
+	return (0);
 }
